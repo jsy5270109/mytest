@@ -1,0 +1,60 @@
+pwd 显示当前所在目录的绝对路径
+cd	~	  从任何目录，直接切换到当前用户家目录  （回家）
+cd	/	  从任何目录，直接切换到根目录
+cd      目录名   切换到当前目录的某个子目录下 （相对）
+cd     /目录名   从任何目录，直接切换到指定目录（绝对）
+cd 	-	  上一次访问的目录（Windows后退）
+cd	../	，上一层目录（Windows向上）
+cd	./	，切入当前目录
+mkdir 文件夹名     创建空文件夹
+		-p 父目录不存在情况下先生成父目录                  （parents）  级                    联创                   建   【必写】
+tail -f 文件名      动态查看信息
+                     示例：ping 127.0.0.1 > xxx.log   将                       ping信息追加到xxx.log文件中
+ 				 	用于动态查看日志                          信息
+
+CTRL+C  强制关闭，强制终止程序
+
+cp 需要复制的文件名 需要粘贴的地址
+		-r  递归处理，将指定目录下的文件与子目录                     一并处理。 【必写】
+mv 需要移动的文件名 需要移动到的地址
+		-f 　不询问的强制覆盖。
+rm -rf 需要删除的文件/文件夹
+     r 递归删除操作
+      f 不询问强制删除
+vim 文件名        编辑某个文件
+?	输入“vim 文件名”进入“一般模式”pppp
+?	按下“i”从一般模式，进入“插入模式”
+?	按下“esc”从“插入模式”退出到“一般模式”
+?	在“一般模式”下，输入“:wq”，退出编辑。
+grep -i 需要查询的字符串 [文件名]		从指定文        件中根据正则查询指定内容
+		i 忽略大小写匹配字符
+?	压缩：tar -zcvf xxxx.tar.gz 需要压缩的文件
+?	解压：tar -zxvf xxxx.tar.gz     把压缩包内容解压到当前目录中
+?	解压到指定目录：tar -zxvf xxxx.tar.gz -C 路径地址    把压缩包内容解压到指定目录中
+-c 建立一个压缩文件的参数指令（create）--压缩
+-x 解开一个压缩文件的参数指令（extract）--解压
+-z 是否需要用 gzip 压缩
+-v 压缩的过程中显示文件（verbose）
+-f 使用档名，在 f 之后要立即接档名（file）
+ 	需求1：查询当前进程中和Java相关的程序
+ps -ef | grep -i java
+
+kill -9 PID   强制杀死某个进程
+
+ifconfig   专门查看网络设置。    IP地址，mac地址
+			eth0 是一块虚拟网卡
+			setup 设置网络，eth0
+			cat /etc/sysconfig/network-scripts/ifcfg-eth0
+
+
+ 
+ping ip地址  测试和某个IP主机之间的连接状态
+
+?	Linux centos重启命令：reboot
+
+?	Linux centos关机命令：halt 立刻关机
+
+zookeeper：./zookeeper-3.4.5/bin/zkServer.sh start
+./tomcat_dubbo/bin/startup.sh
+Tracker：/usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf
+Storage：/usr/bin/fdfs_storaged /etc/fdfs/storage.conf
